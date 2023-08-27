@@ -1,12 +1,12 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { ACTION_ADD_CURRENT_FILMS } from "../../redux/ListFilm";
+import { ACTION_LOGOUT } from "../../redux/isLogin";
+import { LOCAL_KEY_ISLOGIN } from "../../utils/const";
+import { REDUX_INTERFACE } from "../../utils/interface";
+import { LIST_FILMS } from "../../utils/listFilms";
+import React from "react";
 import "./Header.css";
-import { REDUX_INTERFACE } from "../../interface";
-import { LOCAL_KEY_ISLOGIN } from "../../const";
-import { ACTION_ADD_CURRENT_FILMS } from "../../redux/list_films";
-import { ACTION_LOGOUT } from "../../redux/is_login";
-import { LIST_FILMS } from "../../listFilms";
 
 function Header() {
   const checkUser = useSelector(

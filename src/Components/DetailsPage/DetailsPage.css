@@ -3,36 +3,36 @@
 }
 
 .component-wrapper {
-  min-height: 550px;
   height: auto;
   width: 100%;
-  border-radius: 15px;
+  min-height: 550px;
   margin-top: 40px;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-attachment: fixed;
+  border-radius: 15px;
 }
 
 .component {
-  display: flex;
-  justify-content: space-around;
- background-color: rgba(56, 56, 56, 0.6);
-  min-height: 550px;
   height: auto;
+  min-height: 550px;
   width: 100%;
-  border-radius: 15px;
   margin-top: 40px;
+  display: flex;
+  background-color: rgba(56, 56, 56, 0.6);
+  justify-content: space-around;
+  border-radius: 15px;
 }
 
 .poster {
-  padding-top: 29px;
   height: 495px;
+  padding-top: 29px;
   padding-left: 45px;
 }
 
 .title-film {
-  font-size: 28px;
   color: #b2e560;
+  font-size: 28px;
 }
 
 .film-overview {
@@ -40,26 +40,25 @@
 }
 
 .info-film {
-  color: white;
+  width: 700px;
   hyphens: auto;
   overflow-wrap: break-word;
+  color: white;
   font-size: 16px;
-  width: 700px;
 }
 
 .film-details {
   width: 640px;
-  color: white;
   overflow-wrap: break-word;
+  line-height: 10px;
   font-size: 16px;
   color: #b2e560;
-  line-height: 10px;
 }
 
 .exit_btn {
+  height: 30px;
   margin-top: 15px;
   margin-left: 60px;
-  height: 30px;
 }
 
 .link_details {

@@ -1,18 +1,20 @@
-import "./Pagination.css";
-import React, { useEffect } from "react";
-import { REDUX_INTERFACE } from "../../../interface";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  MAX_FILM_PAGE,
-  FIRST_PAGE,
-  LOCAL_KEY_PAGES,
-} from "../../../const";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   ACTION_NEXT_PAGE,
   ACTION_PREVIOUS_PAGE,
-} from "../../../redux/pages";
+} from "../../../redux/Pages";
+import {
+  FIRST_PAGE,
+  LOCAL_KEY_PAGES,
+  MAX_FILM_PAGE,
+} from "../../../utils/const";
+import { REDUX_INTERFACE } from "../../../utils/interface";
+import React from "react";
+import "./Pagination.css";
 
 function Pagination() {
+  const dispatch = useDispatch();
   const pages = useSelector(
     (state: REDUX_INTERFACE) => state.filmPages.page
   );
@@ -20,22 +22,11 @@ function Pagination() {
     (state: REDUX_INTERFACE) => state.currentFilms.films
   );
 
-  console.log(pages);
-
-  const dispatch = useDispatch();
   const LAST_PAGE = Math.ceil(currentFilms.length / MAX_FILM_PAGE);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_KEY_PAGES, JSON.stringify(pages));
   }, [pages]);
-
-  function prevPage() {
-    dispatch(ACTION_PREVIOUS_PAGE());
-  }
-
-  function nextPage() {
-    dispatch(ACTION_NEXT_PAGE());
-  }
 
   return (
     <div className="pagination_wrapper">
@@ -45,7 +36,7 @@ function Pagination() {
         <img
           src="/icons/arrowLeft.svg"
           className="pagination_btn"
-          onClick={() => prevPage()}
+          onClick={() => dispatch(ACTION_PREVIOUS_PAGE())}
         />
       )}
       <div className="number_page">{pages + " из " + LAST_PAGE}</div>
@@ -55,7 +46,7 @@ function Pagination() {
         <img
           src="/icons/arrowRight.svg"
           className="pagination_btn"
-          onClick={() => nextPage()}
+          onClick={() => dispatch(ACTION_NEXT_PAGE())}
         />
       )}
     </div>

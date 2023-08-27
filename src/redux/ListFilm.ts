@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { initialState } from "./initial_state";
-import { FILMS_INTERFACE } from "../interface";
+import { initialState } from "./InitialState";
+import { FILMS_INTERFACE } from "../utils/interface";
 
 export const filmsSlice = createSlice({
   name: "films",

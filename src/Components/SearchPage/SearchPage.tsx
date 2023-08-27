@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from "react";
-import "./search.css";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { ACTION_ADD_DETAILS_FILM } from "../../redux/DetailsFilm";
+import { ACTION_ADD_CURRENT_SEARCH_FILM } from "../../redux/ListFilm";
+import { ACTION_NEXT_PAGE_SEARCH } from "../../redux/Pages";
 import {
   GENRES_LIST,
   LOCAL_KEY_SEARCH_FILM,
   MAX_FILM_FIND,
   NOT_FOUND_FILM,
-} from "../../const";
+} from "../../utils/const";
+import { findFilterFilm } from "../../utils/filtersFilms";
+import {
+  FILMS_INTERFACE,
+  REDUX_INTERFACE,
+} from "../../utils/interface";
 import { Header } from "../Header/Header";
-import { findFilterFilm } from "../../filter_films";
-import { useDispatch, useSelector } from "react-redux";
-import { FILMS_INTERFACE, REDUX_INTERFACE } from "../../interface";
-import { ACTION_ADD_CURRENT_SEARCH_FILM } from "../../redux/list_films";
-import { ACTION_ADD_DETAILS_FILM } from "../../redux/details_film";
-import { ACTION_NEXT_PAGE_SEARCH } from "../../redux/pages";
-import { Link } from "react-router-dom";
+import React from "react";
+import "./SearchPage.css";
 
 function Search() {
   const [popularity, setPopularity] = useState<string>("Популярный");
@@ -48,8 +52,6 @@ function Search() {
       )
     );
   }
-
-  console.log(currentFilm);
 
   return (
     <div className="app">

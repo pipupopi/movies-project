@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { pageSlice } from "./pages";
-import { filmsSlice } from "./list_films";
-import { genresSlice } from "./genres";
-import { isLoginSlice } from "./is_login";
-import { detailsSlice } from "./details_film";
+import { pageSlice } from "./Pages";
+import { filmsSlice } from "./ListFilm";
+import { genresSlice } from "./Genres";
+import { isLoginSlice } from "./isLogin";
+import { detailsSlice } from "./DetailsFilm";
 
 export const store = configureStore({
   reducer: {

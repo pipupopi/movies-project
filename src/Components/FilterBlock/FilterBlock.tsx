@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { Genres } from "./Genres/Genres";
-import "./FilterBlock.css";
-import { ReleaseYear } from "./ReleaseYear/ReleaseYear";
-import { SelectFilter } from "./Selector/Selector";
-import { Pagination } from "./Pagination/Pagination";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { ACTION_RESET_GENRES } from "../../redux/Genres";
+import { ACTION_ADD_CURRENT_FILMS } from "../../redux/ListFilm";
+import { ACTION_REMOVE_PAGE } from "../../redux/Pages";
 import {
   RATTINGS_VALUES,
   SELECTED_DEFAULT,
   SELECTED_FAVORITE,
   SELECTED_SAVED,
   YEARS,
-} from "../../const";
-import { useDispatch, useSelector } from "react-redux";
-import { defaultFilterFilms } from "../../filter_films";
-import { ACTION_ADD_CURRENT_FILMS } from "../../redux/list_films";
-import { ACTION_REMOVE_PAGE } from "../../redux/pages";
-import { ACTION_RESET_GENRES } from "../../redux/genres";
-import { LogInSelect } from "../login_select/select_list";
-import { LIST_FILMS } from "../../listFilms";
-import { REDUX_INTERFACE } from "../../interface";
-import { Link } from "react-router-dom";
+} from "../../utils/const";
+import { defaultFilterFilms } from "../../utils/filtersFilms";
+import { REDUX_INTERFACE } from "../../utils/interface";
+import { LIST_FILMS } from "../../utils/listFilms";
+import { LogInSelect } from "../ListSelect/ListSelect";
+import "./FilterBlock.css";
+import { Genres } from "./Genres/Genres";
+import { ReleaseYear } from "./ReleaseYear/ReleaseYear";
+import { SelectFilter } from "./Selector/Selector";
+import React from "react";
 
 function FilterBlock() {
   const dispatch = useDispatch();

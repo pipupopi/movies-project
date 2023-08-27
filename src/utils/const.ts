@@ -1,4 +1,5 @@
-import { findFilterFilm } from "./filter_films";
+import { findFilterFilm } from "./filtersFilms";
+
 export const GENRES_LIST = [
   {
     id: 28,
@@ -160,3 +161,4 @@ export const DEFAULT_FILMS_SEARCH = findFilterFilm(
 export const NOT_FOUND_FILM = 0;
 export const CHECK_AGE_ADULT = "ADULT";
 export const CHECK_AGE_UNDERAGE = "UNDERAGE";
+export const RELEASE_FORMAT = "qq.MM.u";

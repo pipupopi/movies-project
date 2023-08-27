@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
-import "./ListFilms.css";
-import { CardFilm } from "../CardFilm/CardFilm";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { REDUX_INTERFACE } from "../../../interface";
-import { MAX_FILM_PAGE } from "../../../const";
+import { LOCAL_GET_CURRENT_FILMS, MAX_FILM_PAGE } from "../../../utils/const";
+import { REDUX_INTERFACE } from "../../../utils/interface";
+import { CardFilm } from "../CardFilm/CardFilm";
+import React from "react";
+import "./ListFilms.css";
 
 function ListFilms() {
   const page = useSelector(
@@ -19,7 +20,7 @@ function ListFilms() {
 
   useEffect(() => {
     localStorage.setItem(
-      "currentFilms",
+      LOCAL_GET_CURRENT_FILMS,
       JSON.stringify(currentFilms)
     );
   }, [currentFilms]);
@@ -39,3 +40,4 @@ function ListFilms() {
 }
 
 export { ListFilms };
+

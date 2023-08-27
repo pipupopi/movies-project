@@ -1,39 +1,39 @@
 .app {
-  margin: 0 auto;
   width: 100%;
   height: 960px;
+  margin: 0 auto;
 }
 
 .wrapper {
-  display: flex;
-  justify-content: space-around;
   height: 550px;
   width: 100%;
-  background-color: #383838;
+  display: flex;
+  justify-content: space-around;
   margin-top: 40px;
+  background-color: #383838;
   border-radius: 15px;
 }
 
 .filter-block {
-  margin: -315px 0px 0px 30px;
-  color: #b2e560;
-  hyphens: auto;
-  overflow-wrap: break-word;
-  font-size: 17px;
   position: absolute;
+  margin: -315px 0px 0px 30px;
   top: 410px;
   padding-right: 40px;
+  color: #b2e560;
+  overflow-wrap: break-word;
+  font-size: 17px;
+  hyphens: auto;
 }
 
 .select-block select {
-  height: 36px;
   width: 285px;
-  font-size: 14px;
+  height: 36px;
+  margin-top: 4px;
+  margin-bottom: 18px;
   padding-left: 4px;
   border: 1px solid #b2e560;
-  margin-top: 4px;
   border-radius: 5px;
-  margin-bottom: 18px;
+  font-size: 14px;
 }
 
 .select-block select:focus {
@@ -41,15 +41,15 @@
 }
 
 .find-btn {
-  background-color: #b2e560;
+  width: 285px;
+  height: 36px;
+  margin-bottom: 12px;
+  color: rgb(22, 22, 48);
   font-size: 15px;
   font-weight: bold;
-  height: 36px;
-  width: 285px;
-  color: rgb(22, 22, 48);
+  background-color: #b2e560;
   border: none;
   border-radius: 5px;
-  margin-bottom: 12px;
 }
 
 .film-img {
@@ -58,25 +58,25 @@
 }
 
 .film {
-  margin: -485px 0px 0px 500px;
   width: 270px;
+  margin: -485px 0px 0px 500px;
 }
 
 .pagination-btn button {
-  background-color: #b2e560;
+  width: 137px;
+  height: 36px;
+  margin: 2px;
+  color: rgb(22, 22, 48);
   font-size: 15px;
   font-weight: bold;
-  height: 36px;
-  width: 137px;
-  color: rgb(22, 22, 48);
+  background-color: #b2e560;
   border: none;
   border-radius: 5px;
-  margin: 2px;
 }
 
 .find-btn:hover {
-  background-color: #6e6e6e;
   color: #fff;
+  background-color: #6e6e6e;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -90,19 +90,19 @@
 }
 
 .error_title {
-  font-size: 20px;
   width: 295px;
   margin-top: 10px;
+  font-size: 20px;
 }
 
 .pagination-btn-no-film button {
+  width: 137px;
+  height: 36px;
+  margin: 2px;
   background-color: #6e6e6e;
+  color: rgb(22, 22, 48);
   font-size: 15px;
   font-weight: bold;
-  height: 36px;
-  width: 137px;
-  color: rgb(22, 22, 48);
   border: none;
   border-radius: 5px;
-  margin: 2px;
 }

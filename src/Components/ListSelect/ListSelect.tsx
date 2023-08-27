@@ -1,13 +1,14 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { ACTION_ADD_CURRENT_FILMS } from "../../redux/ListFilm";
+import { ACTION_REMOVE_PAGE } from "../../redux/Pages";
+import { SELECTED_FAVORITE, SELECTED_SAVED } from "../../utils/const";
+import { mainFilterFilms } from "../../utils/filtersFilms";
 import {
   REDUX_INTERFACE,
   SELECT_LOGIN_INTERFACE,
-} from "../../interface";
-import { LIST_FILMS } from "../../listFilms";
-import { ACTION_ADD_CURRENT_FILMS } from "../../redux/list_films";
-import { ACTION_REMOVE_PAGE } from "../../redux/pages";
-import { mainFilterFilms } from "../../filter_films";
+} from "../../utils/interface";
+import { LIST_FILMS } from "../../utils/listFilms";
+import React from "react";
 
 function LogInSelect({
   selectLogIn,
@@ -30,16 +31,34 @@ function LogInSelect({
   );
 
   function setSelectValue(value: string) {
-    if (value === "Смотреть позже") {
-      selectLogIn(savedFilms);
-      return savedFilms;
-    } else if (value === "Избранные") {
-      selectLogIn(favoriteFilms);
-      return favoriteFilms;
-    } else {
-      selectLogIn(LIST_FILMS);
-      return LIST_FILMS;
+    switch (value) {
+      case SELECTED_SAVED:
+        selectLogIn(savedFilms);
+        return savedFilms;
+      case SELECTED_FAVORITE:
+        selectLogIn(favoriteFilms);
+        return favoriteFilms;
+        break;
+      default:
+        selectLogIn(LIST_FILMS);
+        return LIST_FILMS;
     }
+  }
+
+  function setFilterParams(value: string) {
+    selectList(value);
+    setSelectValue(value);
+    dispatch(ACTION_REMOVE_PAGE());
+    dispatch(
+      ACTION_ADD_CURRENT_FILMS(
+        mainFilterFilms(
+          selectRatting,
+          selectYear,
+          setSelectValue(value),
+          genres
+        )
+      )
+    );
   }
 
   return (
@@ -48,19 +67,7 @@ function LogInSelect({
         <select
           className="filter_selector"
           onChange={(event) => {
-            selectList(event.target.value);
-            setSelectValue(event.target.value);
-            dispatch(ACTION_REMOVE_PAGE());
-            dispatch(
-              ACTION_ADD_CURRENT_FILMS(
-                mainFilterFilms(
-                  selectRatting,
-                  selectYear,
-                  setSelectValue(event.target.value),
-                  genres
-                )
-              )
-            );
+            setFilterParams(event.target.value);
           }}
         >
           <option>Весь список</option>

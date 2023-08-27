@@ -1,11 +1,11 @@
 body {
-  background-color: #6e6e6e;
   font-family: "Eina", Helvetica, Arial, sans-serif;
+  background-color: #6e6e6e;
 }
 .App {
-  margin: 0 auto;
   width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .used_space {

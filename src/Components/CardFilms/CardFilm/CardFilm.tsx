@@ -1,25 +1,23 @@
-import React, { useEffect } from "react";
-import "./CardFilm.css";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { ACTION_ADD_DETAILS_FILM } from "../../../redux/DetailsFilm";
+import {
+  ACTION_ADD_FAVORITE_FILM,
+  ACTION_ADD_SAVED_FILM,
+  ACTION_REMOVE_FAVORITE_FILM,
+  ACTION_REMOVE_SAVED_FILM,
+} from "../../../redux/ListFilm";
 import {
   CARD_FILM,
   FILMS_INTERFACE,
   REDUX_INTERFACE,
-} from "../../../interface";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { LIST_FILMS } from "../../../listFilms";
-import { ACTION_ADD_DETAILS_FILM } from "../../../redux/details_film";
-import {
-  ACTION_ADD_FAVORITE_FILM,
-  ACTION_REMOVE_FAVORITE_FILM,
-} from "../../../redux/list_films";
-import {
-  ACTION_ADD_SAVED_FILM,
-  ACTION_REMOVE_SAVED_FILM,
-} from "../../../redux/list_films";
-
+} from "../../../utils/interface";
+import { LIST_FILMS } from "../../../utils/listFilms";
+import "./CardFilm.css";
 import { AnyAction } from "redux";
-import { LOCAL_KEY_FAVORITE, LOCAL_KEY_SAVED } from "../../../const";
+import { LOCAL_KEY_FAVORITE, LOCAL_KEY_SAVED } from "../../../utils/const";
+import React from "react";
 
 function CardFilm({ vote, title, src }: CARD_FILM) {
   const img = `https://image.tmdb.org/t/p/w500/${src}`;
@@ -102,7 +100,7 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
                   {saved ? (
                     <img
                       className="btn_favorit"
-                      src="./icons/savedIcon.svg"
+                      src="./icons/savedMovie.svg"
                       onClick={() =>
                         removeFilm(title, ACTION_REMOVE_SAVED_FILM)
                       }
@@ -110,14 +108,14 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
                   ) : (
                     <img
                       className="btn_favorit"
-                      src="./icons/saveIcon.svg"
+                      src="./icons/saveMovie.svg"
                       onClick={() => addFilm(ACTION_ADD_SAVED_FILM)}
                     ></img>
                   )}
                   {favorite ? (
                     <img
                       className="btn_favorit"
-                      src="./icons/likedIcon.svg"
+                      src="./icons/likedMovie.svg"
                       onClick={() =>
                         removeFilm(title, ACTION_REMOVE_FAVORITE_FILM)
                       }
@@ -125,7 +123,7 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
                   ) : (
                     <img
                       className="btn_star"
-                      src="./icons/likeIcon.svg"
+                      src="./icons/likeMovie.svg"
                       onClick={() =>
                         addFilm(ACTION_ADD_FAVORITE_FILM)
                       }
@@ -137,11 +135,11 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
                   <div className="icons_card">
                     <img
                       className="btn_favorit"
-                      src="./icons/saveIcon.svg"
+                      src="./icons/saveMovie.svg"
                     ></img>
                     <img
                       className="btn_star"
-                      src="./icons/likeIcon.svg"
+                      src="./icons/likeMovie.svg"
                     ></img>
                   </div>
                 </Link>
@@ -175,3 +173,4 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
 }
 
 export { CardFilm };
+

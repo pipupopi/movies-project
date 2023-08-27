@@ -1,9 +1,18 @@
-import { GENRES_LIST, POPULARITY, RATTINGS_VALUES, VOTE, YEARS } from "./const";
+import {
+  GENRES_LIST,
+  POPULARITY,
+  RATTINGS_VALUES,
+  VOTE,
+  YEARS,
+} from "./const";
 import { format } from "date-fns";
 import { LIST_FILMS } from "./listFilms";
 
 function defaultFilterFilms(array: any) {
-  const sortedByRatting = sortByRatting(RATTINGS_VALUES.POPULAR_DOWN, array);
+  const sortedByRatting = sortByRatting(
+    RATTINGS_VALUES.POPULAR_DOWN,
+    array
+  );
   const sortedByYear = sortByYear(YEARS[2020], sortedByRatting);
   return sortedByYear;
 }
@@ -20,7 +29,11 @@ function mainFilterFilms(
   return sortedByGenres;
 }
 
-function findFilterFilm(popularity: string, vote: string, genre: string) {
+function findFilterFilm(
+  popularity: string,
+  vote: string,
+  genre: string
+) {
   const genres: any = GENRES_LIST.find((item) => item.name === genre);
   const sortedByPopularity = sortByPopularity(popularity, LIST_FILMS);
   const sortedByVote = sortByVote(vote, sortedByPopularity);
@@ -39,14 +52,20 @@ function sortByRatting(ratting: string, array: any[]) {
     case RATTINGS_VALUES.POPULAR_DOWN:
       return [...array].sort((a, b) => b.popularity - a.popularity);
     case RATTINGS_VALUES.RATING_UP:
-      return [...array].sort((a, b) => a.vote_average - b.vote_average);
+      return [...array].sort(
+        (a, b) => a.vote_average - b.vote_average
+      );
     case RATTINGS_VALUES.RATING_DOWN:
-      return [...array].sort((a, b) => b.vote_average - a.vote_average);
+      return [...array].sort(
+        (a, b) => b.vote_average - a.vote_average
+      );
   }
 }
 
 function sortByYear(year: string, array: any) {
-  return [...array].filter((item) => getYear(item.release_date) === year);
+  return [...array].filter(
+    (item) => getYear(item.release_date) === year
+  );
 }
 
 function sortByGenres(genres: number[], array: any) {

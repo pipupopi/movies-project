@@ -1,14 +1,14 @@
-import React from "react";
 import { nanoid } from "nanoid";
-import { YEAR_LIST } from "../../../const";
 import { useDispatch, useSelector } from "react-redux";
-import { ACTION_ADD_CURRENT_FILMS } from "../../../redux/list_films";
-import { ACTION_REMOVE_PAGE } from "../../../redux/pages";
-import { mainFilterFilms } from "../../../filter_films";
+import { ACTION_ADD_CURRENT_FILMS } from "../../../redux/ListFilm";
+import { ACTION_REMOVE_PAGE } from "../../../redux/Pages";
+import { YEAR_LIST } from "../../../utils/const";
+import { mainFilterFilms } from "../../../utils/filtersFilms";
 import {
   REDUX_INTERFACE,
   SELECT_YEAR_INTERFACE,
-} from "../../../interface";
+} from "../../../utils/interface";
+import React from "react";
 
 function ReleaseYear({
   selectYear,

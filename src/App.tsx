@@ -1,12 +1,13 @@
-import React from "react";
 import { Provider } from "react-redux";
-import { MainComponent } from "./Components/MainComponent";
-import { store } from "./redux/store";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ErrorPage } from "./Components/error_page/error_page";
-import { Authorization } from "./Components/authorization/authorization";
-import { DetailsFilm } from "./Components/details_film/details";
-import { Search } from "./Components/search/search";
+import { MainComponent } from "./Components/MainComponent";
+import { Authorization } from "./Components/AuthPage/AuthPage";
+import { DetailsFilm } from "./Components/DetailsPage/DetailsPage";
+import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
+import { Search } from "./Components/SearchPage/SearchPage";
+import { store } from "./redux/Store";
+import React from "react";
+
 function App() {
   return (
     <Provider store={store}>

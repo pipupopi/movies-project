@@ -1,51 +1,52 @@
 .filter_wrapper {
-  position: relative;
-  margin-top: 10px;
   width: 200px;
   height: 670px;
-  border-left: none;
+  position: relative;
+  margin-top: 10px;
   padding-left: 14px;
   padding-right: 45px;
+  border-left: none;
+  color: #fff;
   background-color: #383838;
   border-radius: 15px;
-  color: #fff;
 }
 
 .filter_header {
+  margin-top: 15px;
+  box-sizing: border-box;
   font-size: 25px;
   font-weight: 700;
-  box-sizing: border-box;
-  margin-top: 15px;
 }
 
 .filter_reset {
-  margin-top: 12px;
-  background-color: #b2e560;
-  font-size: 15px;
-  font-weight: bold;
   height: 36px;
   width: 235px;
-  color: #383838;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border: none;
-  border-radius: 5px;
   margin-bottom: 12px;
+  margin-top: 12px;
+  color: #383838;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #b2e560;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .filter_reset:hover {
-  background-color: #6e6e6e;
   color: #fff;
+  background-color: #6e6e6e;
 }
 
 .filter_selector {
   height: 36px;
   width: 235px;
   font-size: 14px;
-  padding-left: 4px;
-  border: 1px solid #b2e560;
   margin-top: 4px;
-  border-radius: 5px;
   margin-bottom: 18px;
+  padding-left: 4px;
+  color: #383838;
+  border-radius: 5px;
+  border: 1px solid #b2e560;
 }
 
 .filter_selector:focus {

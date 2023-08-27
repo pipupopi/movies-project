@@ -1,5 +1,5 @@
-import { INITIAL_STATE_INTERFACE } from "../interface";
-import { LIST_FILMS } from "../listFilms";
+import { INITIAL_STATE_INTERFACE } from "../utils/interface";
+import { LIST_FILMS } from "../utils/listFilms";
 import {
   LOCAL_GET_SAVED,
   LOCAL_GET_FAVORITE,
@@ -9,7 +9,7 @@ import {
   DEFAULT_FILMS_SEARCH,
   LOCAL_GET_SEARCH_FILMS,
   LOCAL_GET_PAGES,
-} from "../const";
+} from "../utils/const";
 
 export const initialState: INITIAL_STATE_INTERFACE = {
   page: JSON.parse(LOCAL_GET_PAGES) || 1,

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { initialState } from "./initial_state";
+import { initialState } from "./InitialState";
 
 export const detailsSlice = createSlice({
   name: "detailsFilm",

@@ -1,14 +1,14 @@
 import React from "react";
-import { FILTER_LIST } from "../../../const";
+import { FILTER_LIST } from "../../../utils/const";
 import { nanoid } from "nanoid";
-import { mainFilterFilms } from "../../../filter_films";
+import { mainFilterFilms } from "../../../utils/filtersFilms";
 import { useDispatch, useSelector } from "react-redux";
-import { ACTION_ADD_CURRENT_FILMS } from "../../../redux/list_films";
-import { ACTION_REMOVE_PAGE } from "../../../redux/pages";
+import { ACTION_ADD_CURRENT_FILMS } from "../../../redux/ListFilm";
+import { ACTION_REMOVE_PAGE } from "../../../redux/Pages";
 import {
   REDUX_INTERFACE,
   SELECT_RATTING_INTERFACE,
-} from "../../../interface";
+} from "../../../utils/interface";
 
 function SelectFilter({
   setSelectRatting,

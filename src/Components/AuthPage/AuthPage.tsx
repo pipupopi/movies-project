@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { ACTION_LOGIN } from "../../redux/isLogin";
 import {
   DEFAULT_LOGIN,
   DEFAULT_PASSWORD,
   LOCAL_KEY_ISLOGIN,
-} from "../../const";
-import { Link } from "react-router-dom";
-import "./authorization.css";
-import { useDispatch } from "react-redux";
-import { ACTION_LOGIN } from "../../redux/is_login";
+} from "../../utils/const";
+import "./AuthPage.css";
+import React from "react";
 
 function Authorization() {
   const [login, setLogin] = useState<string>();
