@@ -13,4 +13,4 @@ The application consists of several pages:
 Login - 123
 Password - 123
 
-![IMG_9744](https://github.com/pipupopi/movies-project/assets/108987663/a572b4f5-d0d8-45d2-b9ee-dc9fbc3e2fd2)
+![Запись экрана 2023-08-27 в 18 14 19](https://github.com/pipupopi/movies-project/assets/108987663/c28cc9d4-bdb5-4406-8842-632d73c3e655)
