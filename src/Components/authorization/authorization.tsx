@@ -32,7 +32,7 @@ function Authorization() {
     <div className="blur-div">
       <div className="block-auth">
         <Link to={"/"}>
-          <img src="/icons/close.svg" className="close-icon" />
+          <img src="./icons/close.svg" className="close-icon" />
         </Link>
         <p className="title">АВТОРИЗАЦИЯ</p>
         <div className="form">

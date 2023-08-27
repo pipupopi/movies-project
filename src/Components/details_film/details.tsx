@@ -38,7 +38,7 @@ function DetailsFilm() {
             <p className="film-overview">{film.overview}</p>
           </div>
           <Link to={"/"}>
-            <img className="exit_btn" src="/icons/close.svg"></img>
+            <img className="exit_btn" src="./icons/close.svg"></img>
           </Link>
         </div>
       </div>

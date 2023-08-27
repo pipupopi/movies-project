@@ -102,7 +102,7 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
                   {saved ? (
                     <img
                       className="btn_favorit"
-                      src="/icons/savedIcon.svg"
+                      src="./icons/savedIcon.svg"
                       onClick={() =>
                         removeFilm(title, ACTION_REMOVE_SAVED_FILM)
                       }
@@ -110,14 +110,14 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
                   ) : (
                     <img
                       className="btn_favorit"
-                      src="/icons/saveIcon.svg"
+                      src="./icons/saveIcon.svg"
                       onClick={() => addFilm(ACTION_ADD_SAVED_FILM)}
                     ></img>
                   )}
                   {favorite ? (
                     <img
                       className="btn_favorit"
-                      src="/icons/likedIcon.svg"
+                      src="./icons/likedIcon.svg"
                       onClick={() =>
                         removeFilm(title, ACTION_REMOVE_FAVORITE_FILM)
                       }
@@ -125,7 +125,7 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
                   ) : (
                     <img
                       className="btn_star"
-                      src="/icons/likeIcon.svg"
+                      src="./icons/likeIcon.svg"
                       onClick={() =>
                         addFilm(ACTION_ADD_FAVORITE_FILM)
                       }
@@ -137,11 +137,11 @@ function CardFilm({ vote, title, src }: CARD_FILM) {
                   <div className="icons_card">
                     <img
                       className="btn_favorit"
-                      src="/icons/saveIcon.svg"
+                      src="./icons/saveIcon.svg"
                     ></img>
                     <img
                       className="btn_star"
-                      src="/icons/likeIcon.svg"
+                      src="./icons/likeIcon.svg"
                     ></img>
                   </div>
                 </Link>
