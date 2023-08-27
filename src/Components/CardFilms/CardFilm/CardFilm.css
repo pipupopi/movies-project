@@ -1,0 +1,91 @@
+.wrapperCard {
+  margin-bottom: 45px;
+  margin-left: 30px;
+  background-color: #383838;
+  border-radius: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapperCard:hover {
+  box-shadow: 0 1px 9px #b2e560;
+}
+
+.img_container {
+  width: 140px;
+  height: 240px;
+}
+
+.img {
+  width: 140px;
+  height: 240px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.icon-card {
+  display: flex;
+}
+
+.icons_card {
+  display: flex;
+}
+
+.halfs {
+  display: flex;
+  width: 323px;
+}
+
+.right {
+  min-width: 160;
+  max-width: 260px;
+}
+
+.header_card {
+  position: absolute;
+  padding-left: 17px;
+  font-size: 16px;
+  color: #b2e560;
+  margin-top: 10px;
+  gap: 40px;
+  max-width: 145px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.name_card {
+  margin-top: 70px;
+  padding-left: 8px;
+  font-size: 15px;
+  width: 150px;
+  height: 30px;
+  padding-left: 5px;
+  text-align: left;
+  font-weight: bolder;
+  color: white;
+  font-size: 16px;
+}
+
+.button_info {
+  position: absolute;
+  margin-top: 100px;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  padding-left: 8px;
+  color: #b2e560;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button_info:hover {
+  color: #6e6e6e;
+}
+
+.btn_star,
+.btn_favorit {
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  width: 23px;
+  height: 23px;
+  padding-left: 10px;
+}

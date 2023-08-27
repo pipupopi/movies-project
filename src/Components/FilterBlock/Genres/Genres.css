@@ -1,0 +1,25 @@
+.genres_container {
+  width: 250px;
+  height: 285px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.genres_wrapper {
+  display: flex;
+  width: 109px;
+  height: 22px;
+  align-items: center;
+  font-size: 13px;
+  text-align: left;
+  margin-top: 2.5px;
+}
+
+.genres_check:hover {
+  background-color: brown;
+}
+
+.genres_check {
+  background-color: brown;
+}

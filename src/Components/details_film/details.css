@@ -1,0 +1,68 @@
+.app {
+  margin: 0 auto;
+}
+
+.component-wrapper {
+  min-height: 550px;
+  height: auto;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 40px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+.component {
+  display: flex;
+  justify-content: space-around;
+ background-color: rgba(56, 56, 56, 0.6);
+  min-height: 550px;
+  height: auto;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 40px;
+}
+
+.poster {
+  padding-top: 29px;
+  height: 495px;
+  padding-left: 45px;
+}
+
+.title-film {
+  font-size: 28px;
+  color: #b2e560;
+}
+
+.film-overview {
+  color: #b2e560;
+}
+
+.info-film {
+  color: white;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  width: 700px;
+}
+
+.film-details {
+  width: 640px;
+  color: white;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  color: #b2e560;
+  line-height: 10px;
+}
+
+.exit_btn {
+  margin-top: 15px;
+  margin-left: 60px;
+  height: 30px;
+}
+
+.link_details {
+  width: 174px;
+  height: 140px;
+}

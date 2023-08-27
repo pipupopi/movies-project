@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  height: 40px;
+}
+
+.btn_home,
+.btn_login {
+  width: 100px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  margin: 4px 4px;
+  font-size: 15px;
+  border-radius: 5px;
+  height: 30px;
+  margin-top: 3px;
+  background-color: #b2e560;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn_home:hover,
+.btn_login:hover {
+  background-color: #383838;
+  color: #fff;
+}

@@ -1,0 +1,26 @@
+.pagination_wrapper {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: -35px;
+  margin-left: 520px;
+}
+
+.pagination_btn {
+  border: none;
+  height: 35px;
+  width: 80px;
+  color: #000;
+  border-radius: 5px;
+  background-color: #383838;
+  font-weight: bold;
+}
+
+.number_page {
+  text-align: center;
+  margin-top: 10px;
+  width: 70px;
+  color: #b2e560;
+  font-size: 16px;
+}

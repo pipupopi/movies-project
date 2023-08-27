@@ -1,0 +1,68 @@
+.block-auth {
+  background-color: #fff;
+  position: absolute;
+  left: 450px;
+  width: 450px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  top: 200px;
+  align-items: center;
+  border-radius: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.close-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 405px;
+  top: 15px;
+}
+
+.title {
+  font-size: 20px;
+  color: #b2e560;
+  margin: -25px;
+}
+
+.text-form {
+  font-size: small;
+  color: #b2e560;
+}
+
+.btn-log-in {
+  border: 0;
+  background-color: #b2e560;
+  border-radius: 5px;
+  width: 140px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.login-input {
+  padding-bottom: 5px;
+  border: 1px solid #b2e560;
+  border-radius: 5px;
+  height: 30px;
+  color: black;
+  width: 320px;
+  padding-left: 10px;
+}
+
+.login-input:focus {
+  outline: none;
+}
+
+.blur-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  backdrop-filter: blur(6px);
+}

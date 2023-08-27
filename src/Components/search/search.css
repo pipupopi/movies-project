@@ -1,0 +1,108 @@
+.app {
+  margin: 0 auto;
+  width: 100%;
+  height: 960px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  height: 550px;
+  width: 100%;
+  background-color: #383838;
+  margin-top: 40px;
+  border-radius: 15px;
+}
+
+.filter-block {
+  margin: -315px 0px 0px 30px;
+  color: #b2e560;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  font-size: 17px;
+  position: absolute;
+  top: 410px;
+  padding-right: 40px;
+}
+
+.select-block select {
+  height: 36px;
+  width: 285px;
+  font-size: 14px;
+  padding-left: 4px;
+  border: 1px solid #b2e560;
+  margin-top: 4px;
+  border-radius: 5px;
+  margin-bottom: 18px;
+}
+
+.select-block select:focus {
+  outline: none;
+}
+
+.find-btn {
+  background-color: #b2e560;
+  font-size: 15px;
+  font-weight: bold;
+  height: 36px;
+  width: 285px;
+  color: rgb(22, 22, 48);
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+.film-img {
+  height: 415px;
+  border-radius: 5px;
+}
+
+.film {
+  margin: -485px 0px 0px 500px;
+  width: 270px;
+}
+
+.pagination-btn button {
+  background-color: #b2e560;
+  font-size: 15px;
+  font-weight: bold;
+  height: 36px;
+  width: 137px;
+  color: rgb(22, 22, 48);
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.find-btn:hover {
+  background-color: #6e6e6e;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.film-card {
+  font-size: 20px;
+}
+
+.search_film-title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.error_title {
+  font-size: 20px;
+  width: 295px;
+  margin-top: 10px;
+}
+
+.pagination-btn-no-film button {
+  background-color: #6e6e6e;
+  font-size: 15px;
+  font-weight: bold;
+  height: 36px;
+  width: 137px;
+  color: rgb(22, 22, 48);
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+}

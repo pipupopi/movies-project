@@ -1,0 +1,17 @@
+body {
+  background-color: #6e6e6e;
+  font-family: "Eina", Helvetica, Arial, sans-serif;
+}
+.App {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.used_space {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+}
