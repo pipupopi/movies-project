@@ -13,6 +13,3 @@ The application consists of several pages:
 Login - 123
 Password - 123
 
-
-https://github.com/pipupopi/movies-project/assets/108987663/8f21bf54-6d47-470e-ae29-d8348a5ca2cf
-
