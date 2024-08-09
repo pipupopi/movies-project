@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { ACTION_RESET_GENRES } from "../../redux/Genres";
+import { ACTION_RESET_GENRES } from "../../redux/genres";
 import { ACTION_ADD_CURRENT_FILMS } from "../../redux/ListFilm";
 import { ACTION_REMOVE_PAGE } from "../../redux/Pages";
 import {
@@ -35,6 +35,9 @@ function FilterBlock() {
   const favorites = useSelector(
     (state: REDUX_INTERFACE) => state.favoriteFilms.favoriteFilms
   );
+  const films = useSelector(
+    (state: REDUX_INTERFACE) => state.currentFilms.films
+  );
 
   useEffect(() => {
     if (selectedList === SELECTED_SAVED) {
@@ -51,9 +54,10 @@ function FilterBlock() {
   function resetFilter() {
     setSelectRatting(RATTINGS_VALUES.POPULAR_DOWN);
     setSelectYear(YEARS[2020]);
+    setSelectFilms(LIST_FILMS);
     dispatch(ACTION_RESET_GENRES());
     dispatch(
-      ACTION_ADD_CURRENT_FILMS(defaultFilterFilms(selectFilms))
+      ACTION_ADD_CURRENT_FILMS(defaultFilterFilms(LIST_FILMS))
     );
     dispatch(ACTION_REMOVE_PAGE());
   }

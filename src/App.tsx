@@ -5,7 +5,7 @@ import { Authorization } from "./Components/AuthPage/AuthPage";
 import { DetailsFilm } from "./Components/DetailsPage/DetailsPage";
 import { ErrorPage } from "./Components/ErrorPage/ErrorPage";
 import { Search } from "./Components/SearchPage/SearchPage";
-import { store } from "./redux/Store";
+import { store } from "./redux/store";
 import React from "react";
 
 function App() {

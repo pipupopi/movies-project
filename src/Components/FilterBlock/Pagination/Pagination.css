@@ -1,13 +1,24 @@
+
 .pagination_wrapper {
   width: 500px;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  margin-top: -35px;
-  margin-left: 520px;
 }
 
 .pagination_btn {
+  height: 35px;
+  width: 80px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #383838;
+  border: none;
+  box-shadow: 0 1px 9px #b2e560;
+}
+
+.pagination_btn-disabled {
   height: 35px;
   width: 80px;
   color: #000;

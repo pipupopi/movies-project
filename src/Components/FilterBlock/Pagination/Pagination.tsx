@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   ACTION_NEXT_PAGE,
   ACTION_PREVIOUS_PAGE,
@@ -31,7 +32,10 @@ function Pagination() {
   return (
     <div className="pagination_wrapper">
       {pages === FIRST_PAGE ? (
-        <img src="/icons/arrowLeft.svg" className="pagination_btn" />
+        <img
+          src="/icons/arrowLeft.svg"
+          className="pagination_btn-disabled"
+        />
       ) : (
         <img
           src="/icons/arrowLeft.svg"
@@ -41,7 +45,10 @@ function Pagination() {
       )}
       <div className="number_page">{pages + " из " + LAST_PAGE}</div>
       {pages === LAST_PAGE ? (
-        <img src="/icons/arrowRight.svg" className="pagination_btn" />
+        <img
+          src="/icons/arrowRight.svg"
+          className="pagination_btn-disabled"
+        />
       ) : (
         <img
           src="/icons/arrowRight.svg"

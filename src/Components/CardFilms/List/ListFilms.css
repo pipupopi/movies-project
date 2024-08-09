@@ -3,4 +3,6 @@
   flex-wrap: wrap;
   align-content: flex-start;
   margin-top: 10px;
+  width: 80vw;
+  height: 90vh;
 }

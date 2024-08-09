@@ -2,14 +2,21 @@ body {
   font-family: "Eina", Helvetica, Arial, sans-serif;
   background-color: #6e6e6e;
 }
-.App {
+.app {
   width: 100%;
   height: auto;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .used_space {
   display: flex;
+}
+
+.pagination_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .link {
